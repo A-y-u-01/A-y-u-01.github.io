@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Babaria | Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="fade-out"> <!-- Start with page faded out -->
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">Ayush B.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="about.html">About & Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="projects-section">
+        <h1 class="page-title">My Projects</h1>
+
+        <article id="soc-triage" class="project-article" tabindex="0">
+            <h2 class="project-title">SOC Alert Triage & Playbooks</h2>
+            <p class="project-desc">Developed a systematic approach to triage simulated security alerts, significantly improving efficiency and accuracy in a personal lab environment.</p>
+            <ul class="project-list">
+                <li>Triaged <strong>300+ simulated alerts</strong> across brute force, suspicious script execution, and new admin creation.</li>
+                <li>Reduced false positives by <strong>28%</strong> through log enrichment.</li>
+                <li>Cut average triage time from 6.5 to <strong>3.8 minutes</strong> using a Python script.</li>
+                <li>Authored incident playbooks mapped to the MITRE ATT&CK framework.</li>
+            </ul>
+            <p class="technologies">Technologies: Python, Pandas, JSON/CSV, MITRE ATT&CK, Markdown, Git</p>
+        </article>
+
+        <article id="phishing-sim" class="project-article" tabindex="0">
+            <h2 class="project-title">Phishing Simulation & Takedown Workflow</h2>
+            <p class="project-desc">Designed and executed phishing campaigns to improve user awareness and standardized a technical workflow for analyzing and containing reported threats.</p>
+            <ul class="project-list">
+                <li>Ran 4 small-scale simulations (120 sends total) to gather metrics.</li>
+                <li>Improved user report rate from <strong>22% to 46%</strong> with targeted training.</li>
+                <li>Standardized a 10-step triage checklist.</li>
+                <li>Defined communication templates for escalation to SOC/IT teams.</li>
+            </ul>
+            <p class="technologies">Technologies: Email Header Analysis, SPF/DKIM/DMARC, Bash/Zsh, Git</p>
+        </article>
+
+        <article id="hardening-tracker" class="project-article" tabindex="0">
+            <h2 class="project-title">Endpoint Hardening & Compliance Tracker</h2>
+            <p class="project-desc">Built a web application to track and report endpoint security compliance with CIS-style checks for macOS.</p>
+            <ul class="project-list">
+                <li>Raised baseline compliance from <strong>62% to 88%</strong> in a lab setting.</li>
+                <li>Tracked patch status, AV status, encryption, and admin presence.</li>
+                <li>Reduced asset lookup time by <strong>40%</strong> with filterable views.</li>
+                <li>Generated weekly compliance reports for auditing.</li>
+            </ul>
+            <p class="technologies">Technologies: Python, Flask, SQLite, macOS Security, Git</p>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Ayush Babaria. Built with custom CSS.</p>
+</footer>
+
+<!-- THIS IS THE SCRIPT BLOCK FOR PAGE TRANSITIONS -->
+<script>
+    // Initialize Lucide Icons first
+    lucide.createIcons();
+
+    // --- Page Transition Script ---
+    
+    // Fade IN the page on load
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.remove('fade-out');
+    });
+
+    // Intercept all internal link clicks to fade OUT
+    document.querySelectorAll('a').forEach(link => {
+        if (link.hostname === window.location.hostname) {
+            link.addEventListener('click', e => {
+                // Ignore links that just scroll on the same page
+                if (link.pathname === window.location.pathname && link.hash) {
+                    return;
+                }
+                
+                e.preventDefault();
+                const destination = link.href;
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 400); // This duration must match your CSS transition time
+            });
+        }
+    });
+
+    // Handle browser back/forward buttons to prevent page from staying faded out
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) { // 'persisted' is true if page is from back/forward cache
+            document.body.classList.remove('fade-out');
+        }
+    });
+</script>
+
+</body>
+</html>

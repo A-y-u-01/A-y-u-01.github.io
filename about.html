@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me | Ayush Babaria</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects/ticketing-system-case-study.html">Case Study</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"
-          >LinkedIn</a
-        >
-        <a href="https://github.com/A-y-u-01" target="_blank">GitHub</a>
-      </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Babaria | About & Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="fade-out">
 
-    <main class="about-section">
-      <h1>About Me</h1>
+<header>
+    <nav>
+        <a href="index.html" class="logo">Ayush B.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html" class="active">About & Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-      <div class="bio-section">
-        <h2>My Journey & Focus</h2>
-        <p>
-          I am a third-year Bachelor of Science student in **Computer Science**
-          at the University of Regina (GPA 82.15, Dean's List). I am committed
-          to pivoting my strong foundational programming skills into the
-          challenging, high-stakes domain of cybersecurity and defensive
-          engineering. I am driven by methodical problem-solving and building
-          systems that can withstand threat modeling.
-        </p>
-      </div>
+<main>
+    <section class="about-section">
+        <h1>About Me</h1>
 
-      <div class="skills-categorized">
-        <h2>Technical Arsenal</h2>
+        <p>I am a third-year Computer Science student at the University of Regina passionate about software development and cybersecurity. I aim to build tools that are both efficient and secure, leveraging hands-on experience in SOC labs and IT troubleshooting.</p>
 
-        <div class="skill-group">
-          <h3>Languages & Core CS</h3>
-          <ul>
-            <li>**Programming:** Python, C++, C#, JavaScript, HTML/CSS</li>
-            <li>**Core CS:** Data Structures, Algorithms, Calculus I (98%)</li>
-          </ul>
+        <h2>Technical Skills</h2>
+        <div class="about-card">
+             <strong>Security:</strong> SIEM (Elastic/Splunk lab), Alert Triage, Incident Documentation, Phishing Analysis, MITRE ATT&CK, Basic Hardening, Runbooks/Playbooks
+        </div>
+        <div class="about-card">
+            <strong>Programming:</strong> Python, SQL, JavaScript, Flask
+        </div>
+        <div class="about-card">
+            <strong>Platforms & Tools:</strong> macOS, Windows, Linux, Git, zsh/Bash, PowerShell (basic)
+        </div>
+        <div class="about-card">
+            <strong>Networking:</strong> TCP/IP, DNS, HTTP, Basic Packet Analysis
         </div>
 
-        <div class="skill-group">
-          <h3>Web & Database Security</h3>
-          <ul>
-            <li>
-              **Frameworks:** Flask (Full-Stack implementation), .NET (Basic)
-            </li>
-            <li>
-              **Databases:** SQLite, MySQL, MongoDB — experience with secure
-              schema design.
-            </li>
-            <li>
-              **Tools:** Git for version control, JSON for data
-              logging/transfer.
-            </li>
-          </ul>
+        <h2>Work Experience</h2>
+        <div class="about-card">
+            <h3>Team Member | BarBurrito</h3>
+            <p>April 2024 - Present</p>
+            <p>Diagnosed and escalated POS/kiosk incidents with clear logs, reducing downtime. Authored job aids to standardize procedures.</p>
+        </div>
+        <div class="about-card">
+            <h3>Sandwich Artist | Subway</h3>
+            <p>Jan 2024 – Mar 2024</p>
+            <p>Troubleshot POS errors under pressure to minimize order delays and maintained accurate closing reports.</p>
         </div>
 
-        <div class="skill-group">
-          <h3>Systems & Defence</h3>
-          <ul>
-            <li>
-              **Networking:** Computer Networks (CS 335) — understanding of
-              protocols and traffic analysis.
-            </li>
-            <li>
-              **Concepts:** Risk and Reward in Information (CS 280), Access
-              Control, System Hardening (self-study).
-            </li>
-            <li>
-              **Practical:** Frontline IT troubleshooting and system error
-              resolution in professional environments.
-            </li>
-          </ul>
+        <h2>Education & Certifications</h2>
+        <div class="about-card">
+            <h3>Bachelor of Science, Computer Science</h3>
+            <p>University of Regina (Jan 2024 - Present)</p>
         </div>
-      </div>
+        <div class="about-card">
+            <h3>Certifications & Labs</h3>
+            <p>SOC Fundamentals (Udemy, in progress). 20+ hours of hands-on labs in alert triage, phishing analysis, and endpoint hardening.</p>
+        </div>
+        <div class="about-card">
+            <h3>Activities</h3>
+            <p>Member of the University Cyber Club and a volunteer for tech support at campus events.</p>
+        </div>
+    </section>
+</main>
 
-      <div class="education-summary">
-        <h2>Academic Excellence</h2>
-        <p>
-          **Bachelor of Science - Computer Science Major**<br />
-          University of Regina | Expected Graduation: 2026<br />
-          **Cumulative GPA: 82.15** | Dean's List, International Entrance Award
-        </p>
-      </div>
-    </main>
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Ayush Babaria. Built with custom CSS.</p>
+</footer>
 
-    <footer>
-      <p>
-        Connect with me on
-        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> | &copy; 2025
-        Ayush Babaria
-      </p>
-    </footer>
-  </body>
+<script>
+    lucide.createIcons();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.remove('fade-out');
+    });
+
+    document.querySelectorAll('a').forEach(link => {
+        if (link.hostname === window.location.hostname) {
+            link.addEventListener('click', e => {
+                if (link.pathname === window.location.pathname && link.hash) {
+                    return;
+                }
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 400);
+            });
+        }
+    });
+
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('fade-out');
+        }
+    });
+</script>
+
+</body>
 </html>

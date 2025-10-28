@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ayush Babaria | Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="fade-out">
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">Ayush B.</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About & Resume</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-hero">
+        <h1 class="page-title">Get In Touch</h1>
+        <p class="hero-subtitle" style="margin-bottom: 2rem;">I'm currently seeking Co-op opportunities for Junior Development and IT/Cybersecurity roles. My inbox is always open—feel free to reach out.</p>
+
+        <a href="mailto:ayushbabariya601@gmail.com" class="contact-email">
+            ayushbabariya601@gmail.com
+        </a>
+
+        <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/ayush-babaria-3184a828a/" target="_blank" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://github.com/A-y-u-01" target="_blank" aria-label="GitHub">
+                <i data-lucide="github"></i>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Ayush Babaria. Built with custom CSS.</p>
+</footer>
+
+<script>
+    lucide.createIcons();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.remove('fade-out');
+    });
+
+    document.querySelectorAll('a').forEach(link => {
+        if (link.hostname === window.location.hostname) {
+            link.addEventListener('click', e => {
+                if (link.pathname === window.location.pathname && link.hash) {
+                    return;
+                }
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 400);
+            });
+        }
+    });
+
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('fade-out');
+        }
+    });
+</script>
+
+</body>
+</html>
