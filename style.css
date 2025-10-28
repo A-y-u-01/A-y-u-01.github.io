@@ -40,13 +40,25 @@ nav a.logo {
     color: transparent;
     text-decoration: none;
 }
+/* Updated Navigation Styling */
 nav ul {
     display: flex;
     list-style: none;
     gap: 1.5rem;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: flex-end; /* Aligns links to the right */
 }
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+    nav ul {
+        gap: 1rem; /* Reduces space between links */
+        justify-content: center; /* Centers the links when they wrap */
+    }
+}
+
 nav ul li a {
     color: #bbb;
     text-decoration: none;
